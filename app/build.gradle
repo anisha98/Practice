@@ -43,7 +43,6 @@ dependencies {
 
     //Android Netowrking
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
-
-
+    //Dependency for circular border around the circle
     implementation 'de.hdodenhof:circleimageview:3.0.2'
 }

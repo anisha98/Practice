@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="100"
-    tools:context=".CardActivity">
+    tools:context=".CardViewActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -19,21 +19,21 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="60"
+        android:layout_weight="10"
         android:scaleType="centerCrop"
         android:id = "@+id/first_name"
         tools:ignore="Suspicious0dp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="60"
+        android:layout_weight="10"
         android:scaleType="centerCrop"
         android:id = "@+id/last_name"
         tools:ignore="Suspicious0dp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="60"
+        android:layout_weight="10"
         android:scaleType="centerCrop"
         android:id = "@+id/email_id"
         tools:ignore="Suspicious0dp" />

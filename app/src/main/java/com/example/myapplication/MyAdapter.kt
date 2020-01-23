@@ -15,8 +15,8 @@ import kotlinx.android.synthetic.main.item_view.view.*
 class MyAdapter(private val dataList:MutableList<Data>): RecyclerView.Adapter<MyHolder>(){
     private lateinit var context: Context
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
-        context = parent.context
-        return MyHolder(LayoutInflater.from(context).inflate(R.layout.item_view,parent,false))
+        var context12 = parent.context
+        return MyHolder(LayoutInflater.from(context12).inflate(R.layout.item_view,parent,false))
     }
 
     override fun getItemCount(): Int = dataList.size
@@ -41,11 +41,12 @@ class MyAdapter(private val dataList:MutableList<Data>): RecyclerView.Adapter<My
             val lastname = data.lastName
             val email = data.email
             val image = data.avatar
-            val intent = Intent(it.context,CardViewActivity::class.java)
-            intent.putExtra("firstname",firstname)
-            intent.putExtra("lastname",lastname)
-            intent.putExtra("email",email)
-            intent.putExtra("image",image)
+            val intent = Intent(it.context,CardViewActivity::class.java).apply {
+                putExtra("firstname", firstname)
+                putExtra("lastname", lastname)
+                putExtra("email", email)
+                putExtra("image", image)
+            }
             it.context.startActivity(intent)
         }
     }
