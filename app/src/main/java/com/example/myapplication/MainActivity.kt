@@ -1,5 +1,6 @@
 package com.example.myapplication
 //import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,8 @@ import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.ParsedRequestListener
 import com.example.myapplication.model.Data
 import com.example.myapplication.model.Reqres
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_card.*
 //import android.support.v7.widget.GridLayoutManager
 //import android.support.v7.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
@@ -40,11 +43,35 @@ class MainActivity : AppCompatActivity() {
                     dataList.addAll(response!!.data)
                     myAdapter.notifyDataSetChanged()
                 }
-
                 override fun onError(anError: ANError?) {
                     TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                 }
-
             })
+        button_add_note.setOnClickListener(){
+            val intent = Intent(this,AddUser::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode==1 && resultCode == RESULT_OK)
+        {
+            val bundle: Bundle? = this.intent.extras
+            bundle?.let{
+                val id = bundle.getString("id")
+                val firstname= bundle.getString("firstname")
+                val lastname= bundle.getString("lastname")
+                val email= bundle.getString("email")
+                val avatar= bundle.getString("image")
+
+                //User user = new User(id,firstname,lastname,email,avator)
+                //Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+
+                //Picasso.get()
+                  //  .load(image)
+                  //  .into(card_img)
+            }
+        }
     }
 }
