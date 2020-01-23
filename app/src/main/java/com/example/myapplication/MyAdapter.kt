@@ -37,6 +37,7 @@ class MyAdapter(private val dataList:MutableList<Data>): RecyclerView.Adapter<My
 
         holder.itemView.setOnClickListener(){
 
+            Toast.makeText(it.context,"pressed",Toast.LENGTH_SHORT).show()
             val firstname = data.firstName
             val lastname = data.lastName
             val email = data.email

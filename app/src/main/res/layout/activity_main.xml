@@ -13,16 +13,17 @@
         android:layout_height="match_parent"
         android:id="@+id/recyclerview"/>
 
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/button_add_note"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="bottom|end|center"
+        android:layout_gravity="bottom|end"
         android:layout_margin="34dp"
         app:lottie_rawRes="@raw/data1"
         tools:ignore="MissingConstraints"
         app:lottie_loop="true"
-        app:lottie_autoPlay="true" />
+        app:lottie_autoPlay="true"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

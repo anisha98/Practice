@@ -14,7 +14,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name=".CardViewActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" ></activity>
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashTheme">
