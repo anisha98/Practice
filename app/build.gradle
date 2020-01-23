@@ -3,6 +3,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+//kotlin kapt and navigation safeargs plugin
+apply plugin: 'kotlin-kapt'
+
+apply plugin: "androidx.navigation.safeargs"
 
 android {
     compileSdkVersion 29
@@ -49,6 +53,19 @@ dependencies {
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
 
 
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-beta01"
     implementation 'de.hdodenhof:circleimageview:3.0.2'
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+
+
+
+
+
+    //Android Room
+    implementation "androidx.room:room-runtime:2.2.0-rc01"
+    implementation "androidx.room:room-ktx:2.2.0-rc01"
+    kapt "androidx.room:room-compiler:2.2.0-rc01"
+
+
 }
