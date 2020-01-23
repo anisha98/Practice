@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".CardActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:scaleType="centerCrop"
+        android:id = "@+id/card_img"
+        tools:ignore="Suspicious0dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:scaleType="centerCrop"
+        android:id = "@+id/first_name"
+        tools:ignore="Suspicious0dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:scaleType="centerCrop"
+        android:id = "@+id/last_name"
+        tools:ignore="Suspicious0dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:scaleType="centerCrop"
+        android:id = "@+id/email_id"
+        tools:ignore="Suspicious0dp" />
+</LinearLayout>
