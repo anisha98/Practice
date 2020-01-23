@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,4 +14,16 @@
         android:id="@+id/recyclerview"/>
 
 
-</LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/button_add_note"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="34dp"
+        app:lottie_rawRes="@raw/data1"
+        tools:ignore="MissingConstraints"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
